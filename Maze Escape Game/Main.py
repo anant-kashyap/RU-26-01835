@@ -81,7 +81,7 @@ def play_game(level_number):
     print_title()
     say("  Level " + str(level_number + 1) + " of " + str(len(LEVELS)), YELLOW)
     print("  Reach the exit! Use W (up), A (left), S (down), D (right).")
-    print("  Type many keys at once, like DDSS. Type Q to go back to the menu.")
+    print("  Type many keys at once, like DDSS. Type Q for menu or 4 to exit.")
     print_legend()
     print_maze(maze)
 
@@ -94,6 +94,10 @@ def play_game(level_number):
 
             if key == "Q":
                 return
+
+            elif key == "4":
+                say("Thanks for playing!", CYAN)
+                exit()
 
             # Work out where the player WANTS to go
             new_row = row
